@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constrained-composite-site"
+authors = [
+    { name = "Marco Rigobello" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "PyYAML"
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "constrained_composite_site.__version__"}
